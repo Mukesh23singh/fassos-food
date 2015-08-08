@@ -22,14 +22,6 @@ ActiveRecord::Schema.define(version: 20150808080639) do
     t.datetime "updated_at", null: false
   end
 
-  create_table "dishes", force: :cascade do |t|
-    t.string   "name"
-    t.string   "price"
-    t.boolean  "veg"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-  end
-
   create_table "products", force: :cascade do |t|
     t.string   "name"
     t.datetime "created_at", null: false
@@ -43,16 +35,5 @@ ActiveRecord::Schema.define(version: 20150808080639) do
 
   add_index "products_categories", ["category_id"], name: "index_products_categories_on_category_id", using: :btree
   add_index "products_categories", ["product_id"], name: "index_products_categories_on_product_id", using: :btree
-
-  create_table "restaurants", force: :cascade do |t|
-    t.string   "name"
-    t.string   "city"
-    t.string   "address"
-    t.string   "state"
-    t.string   "country"
-    t.integer  "pincode"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-  end
 
 end

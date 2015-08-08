@@ -21,6 +21,7 @@
       <%= f.text_field :name, :class => 'form-control' %>
     </div>
     <br/>
+    <%= label_tag :category, "Category" %>
     <div class="controls">
       <%= select_tag "product[category_ids]", options_from_collection_for_select(@categories, "id", "name"), multiple: true %>
     </div>

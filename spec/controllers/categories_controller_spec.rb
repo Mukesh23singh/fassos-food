@@ -24,11 +24,11 @@ RSpec.describe CategoriesController, type: :controller do
   # Category. As you add validations to Category, be sure to
   # adjust the attributes here as well.
   let(:valid_attributes) {
-    skip("Add a hash of attributes valid for your model")
+    skip({:name => Faker::Name.name})
   }
 
   let(:invalid_attributes) {
-    skip("Add a hash of attributes invalid for your model")
+    skip({:name => ""})
   }
 
   # This should return the minimal set of values that should be in the session

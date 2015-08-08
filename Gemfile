@@ -30,6 +30,11 @@ gem 'rails_12factor', group: :production
 gem 'rspec-rails', '~> 3.0',  group: :development
 gem 'quiet_assets', :group => :development
 gem "twitter-bootstrap-rails"
+
+group :test do
+  gem 'rspec-rails', '~> 3.0'
+  gem 'faker'
+end
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
 
